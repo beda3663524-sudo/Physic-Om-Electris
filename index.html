@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электричевство в физике</title>
+    <link rel="shortcut icon" href="./favicon.webp" type="image/x-icon">
+    <style>
+        :root {
+            --bg: #0b0e13;
+            --own: #7fd9c4;
+            --sec: #5fb8a3;
+        }
+        * {
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            -webkit-tap-highlight-color: transparent;
+        }
+        #first {
+            scroll-margin-top: 10px;
+        }
+        html,body {
+            overflow-x: hidden !important;
+        }
+        body {
+            background: var(--bg);
+            color: var(--own);
+            font-family: Georgia, 'Times New Roman', serif;
+            margin: 15px 0 0 12.5px;
+            height: 260dvh;
+        }
+        .hpe {
+            font-weight: 500; font-size: 10px;
+            margin-top: 10px;
+        }
+        .hero__welcome {
+            color: #fff;
+            font-weight: 500;
+            font-size: 29px;
+            margin-top: 10px;
+        }
+        .hero__dis {
+            color: gray;
+            font-size: 14 px;
+            margin-top: 10px;
+        }
+        .hero__start {
+            background: var(--own);
+            width: 175px; height: 50px;
+            text-align: center;
+            padding-top: 15px;
+            display: block;
+            border-radius: 10px;
+            font-weight: 700;
+            color: #0b0e13;
+            margin: 15px 0 0 0;
+        }
+        .Base__welcome {
+            color: gray;
+            margin-top: 15px;
+        }
+        .Base__welcome > span {
+            color: var(--own);
+        }
+        .whatEl__welcome {
+            color: #fff;
+            padding-top: 10px;
+        }
+        .opred__welcome {
+            color: gray;
+            padding-top: 5px;
+        }
+        .containers {
+            background: #141922;
+            width: 95%;
+            height: 135px;
+            border-radius: 20px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .containers:nth-last-child(2) {
+            margin-top: 10px;
+        }
+        .title__tn {
+            padding: 10px 0 0 10px;
+        }
+        .disp__tn {
+            padding: 7.5px 0 0 10px;
+        }
+        .zak__welcome {
+            color: gray;
+            margin-top: 25px;
+        }
+        .zak__welcome > span {
+            color: var(--own);
+        }
+        .zakh__welcome {
+            color: #fff;
+            padding-top: 10px;
+        }
+        .zak__dis {
+            color: gray;
+            padding-top: 5px;
+        }
+        .contom {
+            background: #141922;
+            width: 95%;
+            height: 110px;
+            border-radius: 15px;
+            color: white;
+            margin-top: 10px;
+        }
+        .copr__zak {
+            padding: 10px 0 0 10px;
+        }
+        .num__om {
+            position: relative;
+            left: 70%;
+            bottom: 17.5px;
+            font-size: 18px;
+        }
+        .range {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 95%;
+            height: 6px;
+            background: white;
+            border-radius: 10px;
+            position: relative;
+            left: 5px;
+            accent-color: var(--own);
+        }
+        .range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            background: var(--own);
+            border-radius: 10px;
+            cursor: pointer;
+            accent-color: var(--own);
+        }
+        .range::-moz-range-thumb {
+            width: 15px;
+            height: 15px;
+            background: var(--own);
+            border-radius: 10px;
+            cursor: pointer;
+            accent-color: var(--own);
+        }
+        .formula {
+            text-align: center;
+            padding-top: 10px;
+        }
+        #formula {
+            color: var(--own);
+        }
+        .Tab__welcome {
+            color: gray;
+            margin-top: 25px;
+        }
+        .Tab__welcome > span {
+            color: var(--own);
+        }
+        .Tabh__welcome {
+            color: #fff;
+            padding-top: 10px;
+        }
+        .Tab__dis {
+            color: gray;
+            padding-top: 10px;
+        }
+        th {
+            color: gray;
+            border: 1px solid gray;
+            padding: 0 10px;
+        }
+        td {
+            color: white;
+            border: 1px solid gray;
+            text-align: center;
+            padding: 5px 0;
+        }
+        table {
+            border-collapse: collapse;
+            display: block;
+            width: 100%;
+            position: relative;
+            left: 12.5px;
+            padding: 10px 0 0 0;
+        }
+        .zakon__welcome {
+            color: gray;
+            margin-top: 25px;
+        }
+        .zakon__welcome > span {
+            color: var(--own);
+        }
+        .zakonh__welcome {
+            color: #fff;
+            padding-top: 10px;
+        }
+        .contdz {
+            background: #141922;
+            width: 95%;
+            height: 175px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+        .h3__zak {
+            font-size: 14px;
+            padding: 10px 0 0 10px;
+        }
+        .tepl__zak {
+            font-size: 16px;
+            padding: 10px 0 0 10px;
+            color: white;
+        }
+        .form__zak {
+            color: white;
+            padding: 15px 0 0 10px;
+            font-size: 20px;
+        }
+        .disc__zako {
+            color: gray;
+            padding: 10px 0 0 10px;
+        }
+        .contcoed {
+            background: #141922;
+            width: 95%;
+            height: 175px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+        .h3__coed {
+            padding: 10px 0 0 15px;
+        }
+        .disp__coed {
+            color: white;
+            padding: 10px 0 0 15px;
+        }
+        .showy__posled {
+            list-style: none;
+            background: var(--own);
+            width: 35%;
+            height: 35px;
+            padding-top: 7.5px;
+            text-align: center;
+            color: #141922;
+            border-radius: 10px;
+            font-weight: 600;
+            position: relative;
+            left: 90px;
+            top: 25px;
+        }
+        .parr,
+        .pocl {
+            font-size: 13px;
+            color: white;
+            padding-left: 15px;
+            position: relative;
+            top: 20px;
+        }
+        details[open] summary {
+            display: none;
+        }
+        @media (min-width: 480px) {
+            .showy__posled {
+                left: 145px;
+            }
+            body {
+                height: 193dvh;
+            }
+            .parr,
+            .pocl {
+                font-size: 20px;
+            }
+        }
+        @media (min-width: 768px) {
+            body {
+                height: 190dvh;
+            }
+            .copr__zak {
+                font-size: 22px;
+            }
+            .formula {
+                font-size: 22px;
+                padding-top: 25px;
+            }
+            .contom {
+                height: 150px;
+            }
+             .num__om {
+                font-size: 22px;
+                left: 85%;
+            }
+            .range {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 95%;
+                height: 12px;
+                background: white;
+                border-radius: 10px;
+                position: relative;
+                left: 20px;
+                accent-color: var(--own);
+            }
+            .range::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 25px;
+                height: 25px;
+                background: var(--own);
+                border-radius: 10px;
+                cursor: pointer;
+                accent-color: var(--own);
+            }
+            .range::-moz-range-thumb {
+                width: 25px;
+                height: 25px;
+                background: var(--own);
+                border-radius: 10px;
+                cursor: pointer;
+                accent-color: var(--own);
+            }
+        }
+        @media (min-width: 1024px) {
+            body {
+                height: 200dvh;
+            }
+            .copr__zak {
+                font-size: 22px;
+            }
+            .contom {
+                height: 150px;
+            }
+            .formula {
+                font-size: 22px;
+                padding-top: 25px;
+            }
+            .num__om {
+                font-size: 22px;
+                left: 85%;
+            }
+            .range {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 95%;
+                height: 12px;
+                background: white;
+                border-radius: 10px;
+                position: relative;
+                left: 20px;
+                accent-color: var(--own);
+            }
+            .range::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 25px;
+                height: 25px;
+                background: var(--own);
+                border-radius: 10px;
+                cursor: pointer;
+                accent-color: var(--own);
+            }
+            .range::-moz-range-thumb {
+                width: 25px;
+                height: 25px;
+                background: var(--own);
+                border-radius: 10px;
+                cursor: pointer;
+                accent-color: var(--own);
+            }
+            th {
+            color: gray;
+            border: 1px solid gray;
+            padding: 0 20px;
+        }
+        td {
+            color: white;
+            border: 1px solid gray;
+            text-align: center;
+            padding: 15px 0;
+        }
+        table {
+            border-collapse: collapse;
+            display: block;
+            width: 100%;
+            position: relative;
+            left: 300px;
+            padding: 20px 0 0 0;
+        }
+        }
+        @media (min-width: 1280px) {
+            th {
+            color: gray;
+            border: 1px solid gray;
+            padding: 0 20px;
+        }
+        td {
+            color: white;
+            border: 1px solid gray;
+            text-align: center;
+            padding: 15px 0;
+        }
+        table {
+            border-collapse: collapse;
+            display: block;
+            width: 100%;
+            position: relative;
+            left: 470px;
+            padding: 20px 0 0 0;
+        }
+        }
+        @media (min-width: 1440px) {
+            body {
+                height: 200dvh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h6 class="hpe">ДОМАШНЯЯ РАБОТА · ФИЗИКА · ЭЛЕКТРИЧЕСТВО</h6>
+        <h1 class="hero__welcome">Электрические цепи</h1>
+        <p class="hero__dis">Заряд, ток и напряжение - и то, как закон Ома связывает их в простой цепи с резистором.</p>
+        <a class="hero__start" href="#first">Начать изучение &darr;</a>
+    </main>
+    <section id="first">
+        <h4 class="Base__welcome"><span>01</span> · БАЗА</h4>
+        <h2 class="whatEl__welcome">Что такое ток</h2>
+        <p class="opred__welcome">Ток - упорядоченное движение зарядов. Напряжение - разность потанциалов, толкающая заряды по цепи.</p>
+        <div class="containers">
+            <h1 class="title__tn">Ток, I</h1>
+            <p class="disp__tn">Заряд, проходящий через сечение проводника за секунду.
+                Измеряется в Амперах.
+            </p>
+        </div>
+         <div class="containers">
+            <h1 class="title__tn">Напряжение, U</h1>
+            <p class="disp__tn">Работа по переносу единичного<br> заряда между двумя точками.
+                Измеряется в вольтах.
+            </p>
+        </div>
+    </section>
+    <section id="second">
+        <h4 class="zak__welcome"><span>02</span> · КОНСТРУКТОР</h4>
+        <h1 class="zakh__welcome">Закон Ома</h1>
+        <p class="zak__dis">Слайдер сопротивления - рядом виден<br> ток при фиксированном напряжении,
+            по формуле I = U/R.
+        </p>
+        <div class="contom">
+            <h6 class="copr__zak">Сопротивление R</h6>
+            <h5 id="numbOM" class="num__om"></h5>
+            <input class="range" type="range" id="range" min="10" max="500" value="10" step="10">
+            <h3 class="formula">I = I / R = <span id="formula"></span> A</h3>
+        </div>
+    </section>
+    <section id="third">
+        <h4 class="Tab__welcome"><span>03</span> · ТАБЛИЦА</h4>
+        <h1 class="Tabh__welcome">Ток при разном сопротивлении</h1>
+        <table>
+            <tr><th>R, ОМ</th><th>I, A (при 12В)</th><th>P, ВТ</th></tr>
+            <tr><td>50</td><td>0.24</td><td>2.88</td></tr>
+            <tr><td>100</td><td>0.12</td><td>1.44</td></tr>
+            <tr><td>150</td><td>0.08</td><td>0.96</td></tr>
+            <tr><td>300</td><td>0.04</td><td>0.48</td></tr>
+        </table>
+        <p class="Tab__dis">При росте R ток падает, а рассеиваемая мощность убывает еще
+            быстрее.
+        </p>
+    </section>
+    <section id="fouth">
+        <h4 class="zakon__welcome"><span>04</span> · ЗАКОНЫ</h4>
+        <h1 class="zakonh__welcome">Мощность и нагрев</h1>
+        <div class="contdz">
+            <h3 class="h3__zak">ЗАКОН ДЖОУЛЯ - ЛЕНЦА</h3>
+            <h3 class="tepl__zak">Тепловая мощность тока</h3>
+            <h3 class="form__zak">P = I²R</h3>
+            <p class="disc__zako">Проводник нагревается пропорционально квадрату тока и сопротивлению.</p>
+        </div>
+        <div class="contcoed">
+            <h3 class="h3__coed">СОЕДИНЕНИЯ</h3>
+            <h3 class="disp__coed">Последовательно и параллельно</h3>
+            <details>
+                <summary class="showy__posled">Показать</summary>
+                <h4 class="pocl">Последовательно: R = R₁ + R₂ + ...</h4>
+                <h4 class="parr">Параллельно: 1/R = 1/R₁ + 1/R₂ + ...</h4>
+            </details>
+        </div>
+    </section>
+    <script>
+        const rang = document.getElementById('range'),
+              OM = document.getElementById('numbOM'),
+              AMP = document.getElementById('formula'),
+              U = 12
+        function update() {
+            const R = parseFloat(rang.value);
+            OM.textContent = R + " Ом";
+            AMP.textContent = (U/R).toFixed(2);
+        }
+        rang.addEventListener('input', update);
+
+        update()
+    </script>
+</body>
+</html>
